@@ -1,0 +1,6 @@
+{
+  "name": "cf-ninjas",
+  "description": "CF Ninjas AI Usage Widget add-ons for Claude Code",
+  "owner": { "name": "CF Ninjas" },
+  "plugins": [{ "name": "cf-usage-band", "source": "./" }]
+}
