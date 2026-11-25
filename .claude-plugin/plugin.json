@@ -1,1 +1,1 @@
-{"name": "cf-usage-band", "version": "0.4.0", "description": "CF Ninjas usage band above the prompt: prompt-cache timer, 5-hour and weekly usage, and with the CF Ninjas widget installed, plan name, monthly usage and credits", "author": {"name": "CF Ninjas"}, "types": "./types/index.d.ts"}
+{"name": "cf-usage-band", "version": "0.5.0", "description": "CF Ninjas usage band above the prompt: prompt-cache timer, 5-hour and weekly usage, and with the CF Ninjas widget installed, plan name, monthly usage and credits", "author": {"name": "CF Ninjas"}, "types": "./types/index.d.ts"}

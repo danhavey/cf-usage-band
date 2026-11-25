@@ -12,8 +12,10 @@ A band above the Claude Code prompt box:
 - **With the CF Ninjas AI Usage Widget on the same computer**: the plan name,
   monthly usage against its limit, and the usage-credit balance.
 
-It works in cloud sessions and local ones. In a cloud session there is no
-widget, so the band shows the cache timer and the 5-hour and weekly figures.
+It works in cloud sessions and local ones. Where the widget isn't on the
+computer (a cloud session, say), the band asks Anthropic itself for the plan,
+monthly usage and credit balance, the same figures Claude Code's /usage shows.
+Type `/usage-band` to see where each figure came from.
 
 ## Install
 
@@ -24,8 +26,10 @@ and it appears in every new Claude Code session on that account.
 By hand: at claude.ai/customize/plugins choose **Add → Add marketplace**, enter
 `danhavey/cf-usage-band`, install **cf-usage-band**, then start a new session.
 
-The band reads nothing from the network. It reads the widget's own saved
-figures on the computer it runs on, when the widget is there.
+Its only network requests go to Anthropic (api.anthropic.com), signed in as
+the session already is: Claude Code adds the sign-in itself, and the band never
+sees it. With the widget on the same computer and up to date, it reads the
+widget's saved figures instead.
 
 This repository is published from the widget's source; changes made here are
 overwritten.

@@ -22,8 +22,23 @@ export type WidgetCredits = {
   fetchedAt: number
 }
 
+/** What the band fetched itself from Anthropic with the session's own sign-in (works in cloud sessions too). */
+export type DirectFigures = {
+  /** Free, Pro, Max, Ultra, Team, Enterprise; null if unknown. */
+  plan: string | null
+  usedDollars: number | null
+  limitDollars: number | null
+  balanceDollars: number | null
+  /** ISO code of the amounts; null means dollars. */
+  currency: string | null
+  /** When the last request came back, $.clock.now() ms; 0 never. */
+  fetchedAt: number
+  /** One line per request, for /usage-band: what came back. */
+  report: string[]
+}
+
 declare module 'claude-code' {
   interface PluginState {
-    'cf-usage-band': { cache: CacheInfo | null; warnedAt: number; tick: number; credits: WidgetCredits | null }
+    'cf-usage-band': { cache: CacheInfo | null; warnedAt: number; tick: number; credits: WidgetCredits | null; direct: DirectFigures | null }
   }
 }
